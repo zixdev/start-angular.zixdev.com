@@ -19,7 +19,10 @@ import {CoreModule} from "./modules/core/core.module";
 
 const APP_ROUTES = [
     {path: '', component: HomeComponent},
-    {path: 'contact-us', component: ContactUsComponent}
+    {path: 'contact-us', component: ContactUsComponent},
+
+
+
 ];
 
 @NgModule({
