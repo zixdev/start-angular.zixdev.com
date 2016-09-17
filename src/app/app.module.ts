@@ -16,6 +16,7 @@ import {
     ContactUsComponent
 } from "./client/containers";
 import {CoreModule} from "./modules/core/core.module";
+import {AppState} from "./app.service";
 
 const APP_ROUTES = [
     {path: '', component: HomeComponent},
@@ -23,6 +24,12 @@ const APP_ROUTES = [
 
 
 
+];
+
+
+// Application wide providers
+const APP_PROVIDERS = [
+    AppState
 ];
 
 @NgModule({
@@ -38,11 +45,14 @@ const APP_ROUTES = [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(APP_ROUTES, {useHash: true}),
+        // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
+        RouterModule.forRoot(APP_ROUTES),
 
         CoreModule
     ],
-    providers: [],
+    providers: [
+        ...APP_PROVIDERS
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
