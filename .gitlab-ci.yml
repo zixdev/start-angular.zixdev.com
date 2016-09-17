@@ -5,7 +5,7 @@ pages:
   script:
     - echo 'Building Site...'
     - mkdir public
-    - mv dist public
+    - mv dist/* public
   artifacts:
     paths:
     - public
