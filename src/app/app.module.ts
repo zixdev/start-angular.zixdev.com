@@ -45,8 +45,8 @@ const APP_PROVIDERS = [
         BrowserModule,
         FormsModule,
         HttpModule,
-        // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
-        RouterModule.forRoot(APP_ROUTES),
+        RouterModule.forRoot(APP_ROUTES, {useHash: true}),
+        // RouterModule.forRoot(APP_ROUTES),
 
         CoreModule
     ],
