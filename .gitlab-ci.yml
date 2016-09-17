@@ -1,5 +1,5 @@
 image: alpine:latest
-
+## this task runner should be runned only when pushing to production .
 pages:
   stage: deploy
   script:
@@ -9,5 +9,7 @@ pages:
   artifacts:
     paths:
     - public
+
   only:
-  - master
+  - prod
+
